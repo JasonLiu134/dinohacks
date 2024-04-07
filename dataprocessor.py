@@ -38,7 +38,7 @@ def classifyCSV(t, csvfile):
     
     return totalDict
 
-def testClassify(s):
+def classify(s):
     data = 'training_data.csv'
     class0 = classifyCSV(0, data)
     class1 = classifyCSV(1, data)
@@ -62,4 +62,4 @@ def testClassify(s):
         return "Other use"
 
 def description():
-    return 'Use by entering a string, and the processor will classify the context in which the word "Dinosaur" is being used (as an actual dinosaur, referring to someone/something very old, or in some other context)' 
+    return 'Use by entering a string, and the processor will classify the context in which the word "Dinosaur" is being used (as an actual dinosaur, referring to someone/something very old, or in some other context). Use the function classify() to do this' 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+</head>
+<body>
+    <h1>Sentiment Analysis Result</h1>
+    <p><strong>Sentence:</strong> {{ sentence }}</p>
+    <p><strong>Overall Sentiment Dictionary:</strong> {{ sentiment_dict }}</p>
+    <p><strong>Negative:</strong> {{ sentiment_dict['neg']*100 }}%</p>
+    <p><strong>Neutral:</strong> {{ sentiment_dict['neu']*100 }}%</p>
+    <p><strong>Positive:</strong> {{ sentiment_dict['pos']*100 }}%</p>
+    <p><strong>Sentence Overall Rating:</strong>
+    {% if sentiment_dict['compound'] >= 0.05 %}
+        Positive
+    {% elif sentiment_dict['compound'] <= - 0.05 %}
+        Negative
+    {% else %}
+        Neutral
+    {% endif %}
+    </p>
+</body>
+</html>

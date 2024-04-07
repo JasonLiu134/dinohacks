@@ -60,3 +60,6 @@ def testClassify(s):
         return "Dinosaur!"
     else:
         return "Other use"
+
+def description():
+    return 'Use by entering a string, and the processor will classify the context in which the word "Dinosaur" is being used (as an actual dinosaur, referring to someone/something very old, or in some other context)' 
